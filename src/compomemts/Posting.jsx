@@ -1,19 +1,20 @@
 
-export default function Posting(){
+export default function Posting({company,role,status,appliedOn,source,url,notes}){
 
     return(
         <div className="job-card">
             <div className="grow">
+                t
                 <h3>
-                    <a href="#">Title</a>
+                    <a href="#">{role}</a>
                 </h3>
-                <p className="company">Company</p>
+                <p className="company">{company}</p>
                 <div className="meta">
-                    Applied Sep 2, 2026 · via Source
+                    {appliedOn} {source}
                 </div>
-                <p className="note">Note</p>
+                <p className="note">{notes}</p>
             </div>
-            <span className="badge badge-applied">Applied</span>
+            <span className="badge badge-applied">{status}</span>
         </div>
     )
 }

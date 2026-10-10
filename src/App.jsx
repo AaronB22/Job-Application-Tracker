@@ -20,15 +20,20 @@ export default function App() {
 			</header>
 
 			<main className="container">
-				<p>{applications.length} applications loaded.</p>
-				<pre>{JSON.stringify(applications[0], null, 2)}</pre>
+				{/* <p>{applications.length} applications loaded.</p>
+				<pre>{JSON.stringify(applications[0], null, 2)}</pre> */}
 
 				<h2>Applications</h2>
 				<div className='job-list'>
-					<Posting/>
-					<Posting/>
-					<Posting/>
-					<Posting/>
+					{applications.map(list=>{
+						return(
+							<Posting
+								{...list}
+								key={list.id}
+							/>
+
+						)
+					})}
 				</div>
 				
 			</main>
