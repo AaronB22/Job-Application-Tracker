@@ -1,4 +1,5 @@
 import { applications } from './applications';
+import Posting from './compomemts/Posting';
 
 /**
  * The starting point. Right now it dumps the raw data on the page so you can
@@ -21,6 +22,15 @@ export default function App() {
 			<main className="container">
 				<p>{applications.length} applications loaded.</p>
 				<pre>{JSON.stringify(applications[0], null, 2)}</pre>
+
+				<h2>Applications</h2>
+				<div className='job-list'>
+					<Posting/>
+					<Posting/>
+					<Posting/>
+					<Posting/>
+				</div>
+				
 			</main>
 		</>
 	);
