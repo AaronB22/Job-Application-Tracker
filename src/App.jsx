@@ -1,4 +1,5 @@
 import { applications } from './applications';
+import List from './compomemts/List';
 import Posting from './compomemts/Posting';
 
 /**
@@ -20,22 +21,7 @@ export default function App() {
 			</header>
 
 			<main className="container">
-				{/* <p>{applications.length} applications loaded.</p>
-				<pre>{JSON.stringify(applications[0], null, 2)}</pre> */}
-
-				<h2>Applications</h2>
-				<div className='job-list'>
-					{applications.map(list=>{
-						return(
-							<Posting
-								{...list}
-								key={list.id}
-							/>
-
-						)
-					})}
-				</div>
-				
+				<List app={applications} />
 			</main>
 		</>
 	);

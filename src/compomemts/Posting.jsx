@@ -1,10 +1,12 @@
 
 export default function Posting({company,role,status,appliedOn,source,url,notes}){
 
+    const badgeClass=`badge badge-${status} `;
+
     return(
         <div className="job-card">
             <div className="grow">
-                t
+                
                 <h3>
                     <a href="#">{role}</a>
                 </h3>
@@ -14,7 +16,7 @@ export default function Posting({company,role,status,appliedOn,source,url,notes}
                 </div>
                 <p className="note">{notes}</p>
             </div>
-            <span className="badge badge-applied">{status}</span>
+            <span className={badgeClass} >{status}</span>
         </div>
     )
 }
