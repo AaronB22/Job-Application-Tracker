@@ -26,7 +26,6 @@ export default function Summary({applications}){
                     break;
             }
         }
-        console.log(interview)
     
     return(
         <div className="summary">
