@@ -1,6 +1,8 @@
 
 export default function Posting({company,role,status,appliedOn,source,url,notes}){
 
+
+    //Badge is set by a String that wil lbe passed in to className
     const badgeClass=`badge badge-${status} `;
 
     return(

@@ -1,6 +1,8 @@
 import SummaryCard from "./SummaryCard";
 
 export default function Summary({applications}){
+
+    //Loops through the data and counts each status type. Each status type will be passed on as a prompt to SummaryCard
     
     let total=0;
     let interview =0;
