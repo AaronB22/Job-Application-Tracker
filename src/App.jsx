@@ -1,6 +1,7 @@
 import { applications } from './applications';
 import List from './compomemts/List';
 import Posting from './compomemts/Posting';
+import Summary from './compomemts/Summary';
 
 /**
  * The starting point. Right now it dumps the raw data on the page so you can
@@ -12,6 +13,7 @@ import Posting from './compomemts/Posting';
  * empty.
  */
 export default function App() {
+
 	return (
 		<>
 			<header className="site-header">
@@ -21,6 +23,7 @@ export default function App() {
 			</header>
 
 			<main className="container">
+				<Summary applications={applications}/>
 				<List app={applications} />
 			</main>
 		</>
